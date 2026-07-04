@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { ArrowDown, FlaskConical, Award, ShieldCheck } from "lucide-react";
-import { COMPANY_NAME, COMPANY_SLOGAN, COMPANY_DESCRIPTION } from "../data";
+import { COMPANY_NAME, COMPANY_SLOGAN, COMPANY_DESCRIPTION, HERO_TEXTS } from "../data";
 
 interface HeroProps {
   onViewProducts: () => void;
@@ -36,7 +36,7 @@ export default function Hero({ onViewProducts }: HeroProps) {
           className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs tracking-wider uppercase mb-6"
         >
           <FlaskConical className="h-3.5 w-3.5 animate-pulse" />
-          Biotecnología Adaptógena Avanzada
+          {HERO_TEXTS.badge}
         </motion.div>
 
         {/* Brand Name */}
@@ -81,7 +81,7 @@ export default function Hero({ onViewProducts }: HeroProps) {
             onClick={onViewProducts}
             className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-400 font-semibold text-slate-950 transition-all hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/25 active:scale-95 flex items-center justify-center gap-2 group cursor-pointer"
           >
-            Ver productos
+            {HERO_TEXTS.btnProducts}
             <ArrowDown className="h-4 w-4 group-hover:translate-y-1 transition-transform" />
           </button>
           <button
@@ -92,7 +92,7 @@ export default function Hero({ onViewProducts }: HeroProps) {
             }}
             className="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 font-semibold transition-all hover:bg-slate-850 hover:border-slate-700 hover:text-white flex items-center justify-center gap-2 cursor-pointer"
           >
-            Respaldo Científico
+            {HERO_TEXTS.btnScience}
           </button>
         </motion.div>
 
@@ -105,15 +105,15 @@ export default function Hero({ onViewProducts }: HeroProps) {
         >
           <div className="flex items-center justify-center gap-2 text-slate-400">
             <Award className="h-5 w-5 text-emerald-400" />
-            <span className="text-sm font-sans">Ensayos Clínicos Controlados</span>
+            <span className="text-sm font-sans">{HERO_TEXTS.trustIndicators[0]}</span>
           </div>
           <div className="flex items-center justify-center gap-2 text-slate-400">
             <ShieldCheck className="h-5 w-5 text-emerald-400" />
-            <span className="text-sm font-sans">100% Orgánico y Vegano</span>
+            <span className="text-sm font-sans">{HERO_TEXTS.trustIndicators[1]}</span>
           </div>
           <div className="hidden md:flex items-center justify-center gap-2 text-slate-400">
             <FlaskConical className="h-5 w-5 text-emerald-400" />
-            <span className="text-sm font-sans">Pureza Certificada por Lote</span>
+            <span className="text-sm font-sans">{HERO_TEXTS.trustIndicators[2]}</span>
           </div>
         </motion.div>
       </div>

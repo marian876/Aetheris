@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { ChevronDown, HelpCircle, MessageSquare } from "lucide-react";
-import { FAQS } from "../data";
+import { FAQS, FAQ_TEXTS, CONTACT_INFO } from "../data";
 
 export default function Faq() {
   const [activeFaqId, setActiveFaqId] = useState<string | null>("faq-1");
@@ -19,14 +19,14 @@ export default function Faq() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="font-sans text-xs font-bold tracking-widest text-emerald-400 uppercase mb-2">
-            Resolución de Dudas
+            {FAQ_TEXTS.subtitle}
           </h2>
           <h3 className="font-sans text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
-            Preguntas Frecuentes
+            {FAQ_TEXTS.title}
           </h3>
           <div className="mt-4 h-1 w-16 bg-gradient-to-r from-emerald-500 to-teal-400 mx-auto rounded-full" />
           <p className="font-sans text-slate-400 text-sm mt-4">
-            Explora las respuestas a las inquietudes más recurrentes sobre las dosis, pureza botánica y farmacocinética de nuestros adaptógenos.
+            {FAQ_TEXTS.description}
           </p>
         </div>
 
@@ -100,7 +100,7 @@ export default function Faq() {
         <div className="mt-12 text-center bg-slate-900/30 border border-slate-900 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-center gap-3">
           <HelpCircle className="h-5 w-5 text-emerald-400" />
           <span className="font-sans text-xs text-slate-400">
-            ¿Tienes alguna consulta científica particular? Contacta con nuestro departamento de farmacobotánica en <strong className="text-white">info@aetherisbiolabs.edu.es</strong>.
+            ¿Tienes alguna consulta científica particular? Contacta con nuestro departamento de farmacobotánica en <strong className="text-white">{CONTACT_INFO.email}</strong>.
           </span>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "motion/react";
 import { X, Trash2, Plus, Minus, ShoppingBag, Receipt, ArrowRight } from "lucide-react";
 import { CartItem } from "../types";
+import { CART_TEXTS } from "../data";
 
 interface CartProps {
   isOpen: boolean;
@@ -54,9 +55,9 @@ export default function Cart({
               <div className="px-6 py-5 border-b border-slate-900 flex items-center justify-between">
                 <div className="flex items-center gap-2.5">
                   <ShoppingBag className="h-5 w-5 text-emerald-400" />
-                  <h3 className="font-sans text-lg font-bold text-white">Tu Carrito</h3>
+                  <h3 className="font-sans text-lg font-bold text-white">{CART_TEXTS.title}</h3>
                   <span className="font-mono text-xs bg-slate-900 px-2 py-0.5 rounded-full border border-slate-800 text-slate-400">
-                    {totalItemCount} {totalItemCount === 1 ? "ítem" : "ítems"}
+                    {totalItemCount} {totalItemCount === 1 ? CART_TEXTS.itemUnit : CART_TEXTS.itemsUnit}
                   </span>
                 </div>
                 <button
@@ -77,9 +78,9 @@ export default function Cart({
                       <ShoppingBag className="h-8 w-8" />
                     </div>
                     <div>
-                      <h4 className="font-sans text-base font-bold text-white">El carrito está vacío</h4>
+                      <h4 className="font-sans text-base font-bold text-white">{CART_TEXTS.emptyTitle}</h4>
                       <p className="font-sans text-xs text-slate-400 max-w-xs mx-auto mt-1">
-                        Explora nuestro catálogo de elíxires adaptógenos y agrega salud y rendimiento a tu rutina diaria.
+                        {CART_TEXTS.emptySubtitle}
                       </p>
                     </div>
                     <button
@@ -87,7 +88,7 @@ export default function Cart({
                       onClick={onClose}
                       className="px-5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-xs font-semibold text-emerald-400 hover:text-emerald-350 hover:bg-slate-850 transition-colors cursor-pointer"
                     >
-                      Explorar productos
+                      {CART_TEXTS.emptyBrowseBtn}
                     </button>
                   </div>
                 ) : (
@@ -169,21 +170,21 @@ export default function Cart({
                   {/* Summary math cards */}
                   <div className="space-y-2 bg-slate-900/40 border border-slate-900/60 rounded-xl p-4">
                     <div className="flex items-center justify-between text-xs font-sans text-slate-400">
-                      <span>Subtotal</span>
+                      <span>{CART_TEXTS.summarySubtotal}</span>
                       <span className="font-mono font-medium text-slate-200">${subtotal.toFixed(2)}</span>
                     </div>
                     <div className="flex items-center justify-between text-xs font-sans text-slate-400">
                       <div className="flex items-center gap-1">
-                        <span>IVA</span>
+                        <span>{CART_TEXTS.summaryTax}</span>
                         <span className="font-mono text-[9px] bg-slate-950 px-1.5 py-0.5 rounded text-slate-500 border border-slate-850">21%</span>
                       </div>
                       <span className="font-mono font-medium text-slate-200">${iva.toFixed(2)}</span>
                     </div>
                     <div className="border-t border-slate-900 my-2 pt-2 flex items-center justify-between text-sm font-sans">
-                      <span className="font-bold text-white">Total General</span>
+                      <span className="font-bold text-white">{CART_TEXTS.summaryTotal}</span>
                       <div className="text-right">
                         <span className="font-mono text-lg font-black text-emerald-400">${total.toFixed(2)}</span>
-                        <span className="font-sans text-[8px] text-slate-500 uppercase block">Dólares USD</span>
+                        <span className="font-sans text-[8px] text-slate-500 uppercase block">{CART_TEXTS.summaryCurrencyUnit}</span>
                       </div>
                     </div>
                   </div>
@@ -196,7 +197,7 @@ export default function Cart({
                       className="w-full py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-400 text-slate-950 font-bold font-sans text-sm flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/10 transition-all hover:scale-[1.02] active:scale-95 cursor-pointer"
                     >
                       <Receipt className="h-4 w-4" />
-                      Procesar pago (Simulado)
+                      {CART_TEXTS.checkoutBtn}
                       <ArrowRight className="h-4 w-4" />
                     </button>
                     <button
@@ -204,7 +205,7 @@ export default function Cart({
                       onClick={onClose}
                       className="w-full py-2.5 text-center text-xs font-semibold text-slate-400 hover:text-white transition-colors cursor-pointer"
                     >
-                      Seguir Comprando
+                      {CART_TEXTS.continueShoppingBtn}
                     </button>
                   </div>
                 </div>

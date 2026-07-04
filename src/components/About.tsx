@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { Beaker, Leaf, ShieldCheck, Cpu, History, Eye, Target } from "lucide-react";
-import { COMPANY_HISTORY, COMPANY_MISSION, COMPANY_VISION, COMPANY_VALUES, TIMELINE } from "../data";
+import { COMPANY_HISTORY, COMPANY_MISSION, COMPANY_VISION, COMPANY_VALUES, TIMELINE, ABOUT_TEXTS } from "../data";
 
 export default function About() {
   // Simple helper to render values icons dynamically
@@ -29,10 +29,10 @@ export default function About() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="font-sans text-xs font-bold tracking-widest text-emerald-400 uppercase mb-2">
-            Nuestros Orígenes
+            {ABOUT_TEXTS.subtitle}
           </h2>
           <p className="font-sans text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
-            Sobre la Empresa
+            {ABOUT_TEXTS.title}
           </p>
           <div className="mt-4 h-1 w-16 bg-gradient-to-r from-emerald-500 to-teal-400 mx-auto rounded-full" />
         </div>
@@ -44,7 +44,7 @@ export default function About() {
               <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
                 <History className="h-5 w-5" />
               </div>
-              <h3 className="font-sans text-2xl font-bold text-white">Nuestra Historia</h3>
+              <h3 className="font-sans text-2xl font-bold text-white">{ABOUT_TEXTS.historyTitle}</h3>
             </div>
             <div className="font-sans text-slate-300 leading-relaxed text-base space-y-4 whitespace-pre-line">
               {COMPANY_HISTORY}
@@ -62,9 +62,9 @@ export default function About() {
               />
               {/* Absolutes for organic feel */}
               <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-slate-950/80 backdrop-blur-md border border-slate-800/80 text-left">
-                <span className="font-mono text-[10px] text-emerald-400 uppercase tracking-widest block">Cultivo Controlado</span>
+                <span className="font-mono text-[10px] text-emerald-400 uppercase tracking-widest block">{ABOUT_TEXTS.historyBadge}</span>
                 <span className="font-sans text-sm text-slate-200 block font-medium mt-1">
-                  Laboratorio de Biotecnología Celular Ficticio
+                  {ABOUT_TEXTS.historyCaption}
                 </span>
               </div>
             </div>
@@ -83,7 +83,7 @@ export default function About() {
             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-6 group-hover:scale-110 transition-transform">
               <Target className="h-6 w-6" />
             </div>
-            <h4 className="font-sans text-xl font-bold text-white mb-3">Nuestra Misión</h4>
+            <h4 className="font-sans text-xl font-bold text-white mb-3">{ABOUT_TEXTS.missionTitle}</h4>
             <p className="font-sans text-slate-300 leading-relaxed text-sm">
               {COMPANY_MISSION}
             </p>
@@ -95,7 +95,7 @@ export default function About() {
             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-500/10 text-emerald-400 border border-teal-500/20 mb-6 group-hover:scale-110 transition-transform">
               <Eye className="h-6 w-6" />
             </div>
-            <h4 className="font-sans text-xl font-bold text-white mb-3">Nuestra Visión</h4>
+            <h4 className="font-sans text-xl font-bold text-white mb-3">{ABOUT_TEXTS.visionTitle}</h4>
             <p className="font-sans text-slate-300 leading-relaxed text-sm">
               {COMPANY_VISION}
             </p>
@@ -105,9 +105,9 @@ export default function About() {
         {/* 3. Valores Corporativos */}
         <div className="mb-24">
           <div className="text-center mb-12">
-            <h4 className="font-sans text-xl font-bold text-white mb-2">Principios que Nos Guían</h4>
+            <h4 className="font-sans text-xl font-bold text-white mb-2">{ABOUT_TEXTS.valuesSubtitle}</h4>
             <p className="font-sans text-sm text-slate-400 max-w-xl mx-auto">
-              Nuestra filosofía opera bajo la máxima integridad de procesos. No tomamos atajos químicos ni alteramos el ciclo biológico.
+              {ABOUT_TEXTS.valuesDescription}
             </p>
           </div>
 
@@ -130,9 +130,9 @@ export default function About() {
         {/* 4. Línea de Tiempo / Timeline Section */}
         <div className="border-t border-slate-900 pt-20">
           <div className="text-center mb-16">
-            <h4 className="font-sans text-2xl font-bold text-white mb-2">Línea de Tiempo</h4>
+            <h4 className="font-sans text-2xl font-bold text-white mb-2">{ABOUT_TEXTS.timelineSubtitle}</h4>
             <p className="font-sans text-sm text-slate-400">
-              Hitos clave que han definido nuestra trayectoria científica y comercial.
+              {ABOUT_TEXTS.timelineDescription}
             </p>
           </div>
 

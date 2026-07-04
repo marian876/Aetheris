@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { GraduationCap, Award, Info, FileText, CheckCircle2, TrendingUp } from "lucide-react";
-import { SCIENTIFIC_STUDIES } from "../data";
+import { SCIENTIFIC_STUDIES, SCIENCE_TEXTS } from "../data";
 
 export default function Science() {
   const [activeStudyIdx, setActiveStudyIdx] = useState(0);
@@ -20,14 +20,14 @@ export default function Science() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="font-sans text-xs font-bold tracking-widest text-emerald-400 uppercase mb-2">
-            Metodología & Ensayos
+            {SCIENCE_TEXTS.subtitle}
           </h2>
           <h3 className="font-sans text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
-            Respaldo Científico
+            {SCIENCE_TEXTS.title}
           </h3>
           <div className="mt-4 h-1 w-16 bg-gradient-to-r from-emerald-500 to-teal-400 mx-auto rounded-full" />
           <p className="font-sans text-slate-400 max-w-xl mx-auto text-sm mt-4">
-            Nuestros elíxires están formulados bajo estrictos parámetros de dosificación celular. Explora los estudios de eficacia simulados.
+            {SCIENCE_TEXTS.description}
           </p>
         </div>
 
@@ -39,10 +39,10 @@ export default function Science() {
             </div>
             <div>
               <span className="font-sans text-xs font-bold tracking-wider text-amber-500 uppercase block mb-1">
-                Aviso de Proyecto Educativo
+                {SCIENCE_TEXTS.academicBannerTitle}
               </span>
               <p className="font-sans text-xs sm:text-sm text-amber-200/90 leading-relaxed font-medium">
-                Los estudios mostrados forman parte de un proyecto educativo y fueron creados únicamente con fines académicos. Toda la terminología científica, métricas, universidades citadas y bibliografías son ficticias.
+                {SCIENCE_TEXTS.academicBannerText}
               </p>
             </div>
           </div>
@@ -65,7 +65,7 @@ export default function Science() {
                 <span className="truncate max-w-[200px] sm:max-w-xs">{study.badge}</span>
               </div>
               <span className="text-[10px] uppercase tracking-wider font-mono bg-emerald-500/10 px-2 py-0.5 rounded-full text-emerald-400">
-                Estudio
+                {SCIENCE_TEXTS.studyBadge}
               </span>
             </button>
           ))}
@@ -87,7 +87,7 @@ export default function Science() {
                 <div className="flex flex-wrap gap-2 items-center">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-[10px] tracking-wider uppercase">
                     <GraduationCap className="h-3 w-3" />
-                    Ensayos Ficticios
+                    {SCIENCE_TEXTS.fictionalTrialsBadge}
                   </span>
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 font-mono text-[10px] tracking-wider uppercase">
                     {activeStudy.badge}
@@ -101,13 +101,13 @@ export default function Science() {
                 <div className="flex items-start gap-3 bg-slate-900/50 p-4 rounded-xl border border-slate-800">
                   <Award className="h-5 w-5 text-emerald-400 shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-sans text-xs font-semibold text-slate-300 block">Centro de Investigación</span>
+                    <span className="font-sans text-xs font-semibold text-slate-300 block">{SCIENCE_TEXTS.researchCenterLabel}</span>
                     <span className="font-sans text-sm text-slate-400 block mt-0.5">{activeStudy.university}</span>
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <span className="font-sans text-xs font-bold text-slate-400 uppercase tracking-widest block">Resumen del Estudio</span>
+                  <span className="font-sans text-xs font-bold text-slate-400 uppercase tracking-widest block">{SCIENCE_TEXTS.abstractLabel}</span>
                   <p className="font-sans text-sm sm:text-base text-slate-300 leading-relaxed">
                     {activeStudy.abstract}
                   </p>
@@ -134,7 +134,7 @@ export default function Science() {
                 <div className="border-t border-slate-800 pt-6 space-y-2">
                   <div className="flex items-center gap-2 text-slate-500">
                     <FileText className="h-4 w-4" />
-                    <span className="font-mono text-[10px] uppercase tracking-wider">Cita Bibliográfica Simulada</span>
+                    <span className="font-mono text-[10px] uppercase tracking-wider">{SCIENCE_TEXTS.citationLabel}</span>
                   </div>
                   <p className="font-sans text-xs italic text-slate-400 leading-normal pl-4 border-l border-emerald-500/50">
                     {activeStudy.citation}
@@ -148,7 +148,7 @@ export default function Science() {
                   <div className="flex items-center gap-2">
                     <TrendingUp className="h-4 w-4 text-emerald-400" />
                     <span className="font-sans text-xs font-bold text-slate-300 uppercase tracking-wider">
-                      Métrica de Eficacia
+                      {SCIENCE_TEXTS.efficacyLabel}
                     </span>
                   </div>
                   <span className="font-mono text-[10px] text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">
@@ -199,15 +199,15 @@ export default function Science() {
                 <div className="mt-8 border-t border-slate-800 pt-6 space-y-3">
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="h-4 w-4 text-emerald-400" />
-                    <span className="font-sans text-xs text-slate-400">Verificación por HPLC (Ficticio)</span>
+                    <span className="font-sans text-xs text-slate-400">{SCIENCE_TEXTS.proofTitle}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="h-4 w-4 text-emerald-400" />
-                    <span className="font-sans text-xs text-slate-400">Cero aditivos químicos de síntesis</span>
+                    <span className="font-sans text-xs text-slate-400">{SCIENCE_TEXTS.proofAdditives}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="h-4 w-4 text-emerald-400" />
-                    <span className="font-sans text-xs text-slate-400">Libre de alérgenos y trazas contaminantes</span>
+                    <span className="font-sans text-xs text-slate-400">{SCIENCE_TEXTS.proofAllergens}</span>
                   </div>
                 </div>
               </div>

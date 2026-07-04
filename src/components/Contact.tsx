@@ -1,7 +1,7 @@
 import { useState, FormEvent } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle2, ShieldCheck, AlertCircle } from "lucide-react";
-import { CONTACT_INFO } from "../data";
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle2, ShieldCheck } from "lucide-react";
+import { CONTACT_INFO, CONTACT_TEXTS } from "../data";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -42,14 +42,14 @@ export default function Contact() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="font-sans text-xs font-bold tracking-widest text-emerald-400 uppercase mb-2">
-            Enlace de Laboratorio
+            {CONTACT_TEXTS.subtitle}
           </h2>
           <h3 className="font-sans text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
-            Contacto
+            {CONTACT_TEXTS.title}
           </h3>
           <div className="mt-4 h-1 w-16 bg-gradient-to-r from-emerald-500 to-teal-400 mx-auto rounded-full" />
           <p className="font-sans text-slate-400 max-w-xl mx-auto text-sm mt-4">
-            ¿Deseas saber más sobre nuestras formulaciones adaptógenas? Escríbenos. Nuestro equipo multidisciplinario responderá tus consultas científicas.
+            {CONTACT_TEXTS.description}
           </p>
         </div>
 
@@ -58,7 +58,7 @@ export default function Contact() {
           {/* Left Side: Contact Information & Illustrative Vector Map */}
           <div className="lg:col-span-5 space-y-8">
             <div className="bg-slate-950 rounded-2xl border border-slate-800 p-6 md:p-8 space-y-6 shadow-xl">
-              <h4 className="font-sans text-xl font-bold text-white mb-2">Canales de Enlace</h4>
+              <h4 className="font-sans text-xl font-bold text-white mb-2">{CONTACT_TEXTS.channelsTitle}</h4>
 
               {/* Address */}
               <div className="flex gap-4 items-start text-slate-300 text-sm">
@@ -66,7 +66,7 @@ export default function Contact() {
                   <MapPin className="h-5 w-5" />
                 </div>
                 <div>
-                  <span className="font-sans text-xs font-semibold text-slate-400 block uppercase">Dirección</span>
+                  <span className="font-sans text-xs font-semibold text-slate-400 block uppercase">{CONTACT_TEXTS.addressLabel}</span>
                   <span className="block mt-1 leading-relaxed">{CONTACT_INFO.address}</span>
                 </div>
               </div>
@@ -77,7 +77,7 @@ export default function Contact() {
                   <Phone className="h-5 w-5" />
                 </div>
                 <div>
-                  <span className="font-sans text-xs font-semibold text-slate-400 block uppercase">Teléfonos</span>
+                  <span className="font-sans text-xs font-semibold text-slate-400 block uppercase">{CONTACT_TEXTS.phoneLabel}</span>
                   <span className="block mt-1 font-mono">{CONTACT_INFO.phone}</span>
                 </div>
               </div>
@@ -88,7 +88,7 @@ export default function Contact() {
                   <Mail className="h-5 w-5" />
                 </div>
                 <div>
-                  <span className="font-sans text-xs font-semibold text-slate-400 block uppercase">Correo Electrónico</span>
+                  <span className="font-sans text-xs font-semibold text-slate-400 block uppercase">{CONTACT_TEXTS.emailLabel}</span>
                   <span className="block mt-1 text-emerald-400 font-medium">{CONTACT_INFO.email}</span>
                 </div>
               </div>
@@ -99,7 +99,7 @@ export default function Contact() {
                   <Clock className="h-5 w-5" />
                 </div>
                 <div>
-                  <span className="font-sans text-xs font-semibold text-slate-400 block uppercase">Horario de Enlace</span>
+                  <span className="font-sans text-xs font-semibold text-slate-400 block uppercase">{CONTACT_TEXTS.scheduleLabel}</span>
                   <span className="block mt-1 leading-normal text-slate-400">{CONTACT_INFO.schedule}</span>
                 </div>
               </div>
@@ -109,10 +109,10 @@ export default function Contact() {
             <div className="bg-slate-950 rounded-2xl border border-slate-800 p-6 shadow-xl space-y-4">
               <div className="flex items-center justify-between">
                 <span className="font-sans text-xs font-bold text-slate-300 uppercase tracking-wider">
-                  Ubicación Ilustrativa
+                  {CONTACT_TEXTS.mapTitle}
                 </span>
                 <span className="font-mono text-[9px] text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded uppercase font-semibold">
-                  Sede Madrid • Biopolo
+                  {CONTACT_TEXTS.mapBadge}
                 </span>
               </div>
 
@@ -163,11 +163,11 @@ export default function Contact() {
                 {/* Legend Overlay */}
                 <div className="absolute bottom-3 left-3 bg-slate-950/90 border border-slate-800 rounded-lg p-2 flex items-center gap-1.5 pointer-events-none">
                   <div className="h-2 w-2 rounded-full bg-emerald-500 animate-ping" />
-                  <span className="font-sans text-[10px] text-slate-300 font-semibold block">Aetheris BioLabs</span>
+                  <span className="font-sans text-[10px] text-slate-300 font-semibold block">{CONTACT_TEXTS.mapLegend}</span>
                 </div>
               </div>
               <p className="font-sans text-[11px] text-slate-500 leading-normal">
-                Ubicación ficticia en el Distrito Tecnológico. Las visitas físicas requieren previa agenda científica programada con el comité bioético.
+                {CONTACT_TEXTS.mapFootnote}
               </p>
             </div>
           </div>
@@ -185,9 +185,9 @@ export default function Contact() {
                     className="space-y-5 text-left"
                   >
                     <div>
-                      <h4 className="font-sans text-xl font-bold text-white mb-1">Formulario de Enlace</h4>
+                      <h4 className="font-sans text-xl font-bold text-white mb-1">{CONTACT_TEXTS.formTitle}</h4>
                       <p className="font-sans text-xs text-slate-400">
-                        Envía un mensaje a nuestros directores de laboratorio. Recibirás respuesta simulada.
+                        {CONTACT_TEXTS.formSubtitle}
                       </p>
                     </div>
 
@@ -195,28 +195,28 @@ export default function Contact() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div className="space-y-1.5">
                         <label className="font-sans text-xs font-semibold text-slate-400 uppercase tracking-wider block">
-                          Nombre Completo
+                          {CONTACT_TEXTS.nameLabel}
                         </label>
                         <input
                           type="text"
                           required
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                          placeholder="Dr./Dra./Sra./Sr. ..."
+                          placeholder={CONTACT_TEXTS.namePlaceholder}
                           className="w-full bg-slate-900 border border-slate-850 rounded-xl px-4 py-3 font-sans text-sm text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500/80 focus:ring-2 focus:ring-emerald-500/10 transition-all"
                         />
                       </div>
 
                       <div className="space-y-1.5">
                         <label className="font-sans text-xs font-semibold text-slate-400 uppercase tracking-wider block">
-                          Correo Electrónico
+                          {CONTACT_TEXTS.emailLabel}
                         </label>
                         <input
                           type="email"
                           required
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          placeholder="doctor@universidad.edu"
+                          placeholder={CONTACT_TEXTS.emailPlaceholder}
                           className="w-full bg-slate-900 border border-slate-850 rounded-xl px-4 py-3 font-sans text-sm text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500/80 focus:ring-2 focus:ring-emerald-500/10 transition-all"
                         />
                       </div>
@@ -225,31 +225,32 @@ export default function Contact() {
                     {/* Subject Selector */}
                     <div className="space-y-1.5">
                       <label className="font-sans text-xs font-semibold text-slate-400 uppercase tracking-wider block">
-                        Asunto del Enlace
+                        {CONTACT_TEXTS.subjectLabel}
                       </label>
                       <select
                         value={formData.subject}
                         onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                         className="w-full bg-slate-900 border border-slate-850 rounded-xl px-4 py-3 font-sans text-sm text-white focus:outline-none focus:border-emerald-500/80 transition-all"
                       >
-                        <option value="Consulta de Laboratorio">Consulta de Laboratorio / Ensayos</option>
-                        <option value="Distribución & Farmacias">Distribución / Canal Mayorista</option>
-                        <option value="Control de Calidad">Control de Calidad / Cromatografías</option>
-                        <option value="Proyecto Académico">Preguntas de Proyecto Académico</option>
+                        {CONTACT_TEXTS.subjectOptions.map((opt) => (
+                          <option key={opt.value} value={opt.value}>
+                            {opt.label}
+                          </option>
+                        ))}
                       </select>
                     </div>
 
                     {/* Message Area */}
                     <div className="space-y-1.5">
                       <label className="font-sans text-xs font-semibold text-slate-400 uppercase tracking-wider block">
-                        Mensaje / Consulta Científica
+                        {CONTACT_TEXTS.messageLabel}
                       </label>
                       <textarea
                         required
                         rows={5}
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        placeholder="Por favor, describe detalladamente tu consulta..."
+                        placeholder={CONTACT_TEXTS.messagePlaceholder}
                         className="w-full bg-slate-900 border border-slate-850 rounded-xl px-4 py-3 font-sans text-sm text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500/80 focus:ring-2 focus:ring-emerald-500/10 transition-all resize-none"
                       />
                     </div>
@@ -264,12 +265,12 @@ export default function Contact() {
                       {isSubmitting ? (
                         <>
                           <div className="h-4 w-4 rounded-full border-2 border-slate-950 border-t-transparent animate-spin" />
-                          Procesando enlace...
+                          {CONTACT_TEXTS.submitBtnLoading}
                         </>
                       ) : (
                         <>
                           <Send className="h-4 w-4" />
-                          Enviar Mensaje Ficticio
+                          {CONTACT_TEXTS.submitBtn}
                         </>
                       )}
                     </button>
@@ -287,9 +288,9 @@ export default function Contact() {
                     </div>
 
                     <div className="space-y-2">
-                      <h4 className="font-sans text-2xl font-bold text-white">¡Mensaje Enviado Exitosamente!</h4>
+                      <h4 className="font-sans text-2xl font-bold text-white">{CONTACT_TEXTS.successTitle}</h4>
                       <p className="font-sans text-sm text-slate-400 max-w-md mx-auto">
-                        Tu consulta de enlace científico ha sido procesada por nuestro servidor local simulado.
+                        {CONTACT_TEXTS.successText}
                       </p>
                     </div>
 
@@ -297,7 +298,7 @@ export default function Contact() {
                     <div className="bg-slate-900 border border-slate-850 rounded-xl p-4 text-left max-w-md mx-auto text-xs space-y-2">
                       <div className="flex items-center gap-2 text-emerald-400 mb-1">
                         <ShieldCheck className="h-4 w-4" />
-                        <span className="font-bold uppercase tracking-wider font-mono">Registro de Simulación Académica</span>
+                        <span className="font-bold uppercase tracking-wider font-mono">{CONTACT_TEXTS.successReceiptTitle}</span>
                       </div>
                       <div className="text-slate-400 space-y-1">
                         <p><strong>Asunto:</strong> {formData.subject}</p>
@@ -311,7 +312,7 @@ export default function Contact() {
                       onClick={() => setIsSuccess(false)}
                       className="px-6 py-2.5 rounded-xl border border-slate-800 text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-900 transition-colors cursor-pointer"
                     >
-                      Enviar otro mensaje
+                      {CONTACT_TEXTS.successResetBtn}
                     </button>
                   </motion.div>
                 )}

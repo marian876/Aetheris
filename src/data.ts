@@ -402,3 +402,146 @@ export const TERMS_OF_SERVICE = {
   ]
 };
 
+export const HERO_TEXTS = {
+  badge: "Biotecnología Adaptógena Avanzada",
+  btnProducts: "Ver productos",
+  btnScience: "Respaldo Científico",
+  trustIndicators: [
+    "Ensayos Clínicos Controlados",
+    "100% Orgánico y Vegano",
+    "Pureza Certificada por Lote"
+  ]
+};
+
+export const ABOUT_TEXTS = {
+  subtitle: "Nuestros Orígenes",
+  title: "Sobre la Empresa",
+  historyTitle: "Nuestra Historia",
+  historyBadge: "Cultivo Controlado",
+  historyCaption: "Laboratorio de Biotecnología Celular Ficticio",
+  missionTitle: "Nuestra Misión",
+  visionTitle: "Nuestra Visión",
+  valuesSubtitle: "Principios que Nos Guían",
+  valuesDescription: "Nuestra filosofía opera bajo la máxima integridad de procesos. No tomamos atajos químicos ni alteramos el ciclo biológico.",
+  timelineSubtitle: "Línea de Tiempo",
+  timelineDescription: "Hitos clave que han definido nuestra trayectoria científica y comercial."
+};
+
+export const SCIENCE_TEXTS = {
+  subtitle: "Metodología & Ensayos",
+  title: "Respaldo Científico",
+  description: "Nuestros elíxires están formulados bajo estrictos parámetros de dosificación celular. Explora los estudios de eficacia simulados.",
+  academicBannerTitle: "Aviso de Proyecto Educativo",
+  academicBannerText: "Los estudios mostrados forman parte de un proyecto educativo y fueron creados únicamente con fines académicos. Toda la terminología científica, métricas, universidades citadas y bibliografías son ficticias.",
+  studyBadge: "Estudio",
+  fictionalTrialsBadge: "Ensayos Ficticios",
+  researchCenterLabel: "Centro de Investigación",
+  abstractLabel: "Resumen del Estudio",
+  citationLabel: "Cita Bibliográfica Simulada",
+  efficacyLabel: "Métrica de Eficacia",
+  proofTitle: "Verificación por HPLC (Ficticio)",
+  proofAdditives: "Cero aditivos químicos de síntesis",
+  proofAllergens: "Libre de alérgenos y trazas contaminantes"
+};
+
+export const CONTACT_TEXTS = {
+  subtitle: "Enlace de Laboratorio",
+  title: "Contacto",
+  description: "¿Deseas saber más sobre nuestras formulaciones adaptógenas? Escríbenos. Nuestro equipo multidisciplinario responderá tus consultas científicas.",
+  channelsTitle: "Canales de Enlace",
+  addressLabel: "Dirección",
+  phoneLabel: "Teléfonos",
+  emailLabel: "Correo Electrónico",
+  scheduleLabel: "Horario de Enlace",
+  mapTitle: "Ubicación Ilustrativa",
+  mapBadge: "Sede Madrid • Biopolo",
+  mapLegend: "Aetheris BioLabs",
+  mapFootnote: "Ubicación ficticia en el Distrito Tecnológico. Las visitas físicas requieren previa agenda científica programada con el comité bioético.",
+  formTitle: "Formulario de Enlace",
+  formSubtitle: "Envía un mensaje a nuestros directores de laboratorio. Recibirás respuesta simulada.",
+  nameLabel: "Nombre Completo",
+  namePlaceholder: "Dr./Dra./Sra./Sr. ...",
+  emailPlaceholder: "doctor@universidad.edu",
+  subjectLabel: "Asunto del Enlace",
+  subjectOptions: [
+    { value: "Consulta de Laboratorio", label: "Consulta de Laboratorio / Ensayos" },
+    { value: "Distribución & Farmacias", label: "Distribución / Canal Mayorista" },
+    { value: "Control de Calidad", label: "Control de Calidad / Cromatografías" },
+    { value: "Proyecto Académico", label: "Preguntas de Proyecto Académico" }
+  ],
+  messageLabel: "Mensaje / Consulta Científica",
+  messagePlaceholder: "Por favor, describe detalladamente tu consulta...",
+  submitBtn: "Enviar Mensaje Ficticio",
+  submitBtnLoading: "Procesando enlace...",
+  successTitle: "¡Mensaje Enviado Exitosamente!",
+  successText: "Tu consulta de enlace científico ha sido procesada por nuestro servidor local simulado.",
+  successReceiptTitle: "Registro de Simulación Académica",
+  successResetBtn: "Enviar otro mensaje"
+};
+
+export const FAQ_TEXTS = {
+  subtitle: "Resolución de Dudas",
+  title: "Preguntas Frecuentes",
+  description: "Explora las respuestas a las inquietudes más recurrentes sobre las dosis, pureza botánica y farmacocinética de nuestros adaptógenos.",
+  footerNotice: "¿Tienes alguna consulta científica particular? Contacta con nuestro departamento de farmacobotánica en info@aetherisbiolabs.edu.es."
+};
+
+export const PRODUCTS_TEXTS = {
+  subtitle: "Catálogo Oficial",
+  title: "Nuestros Productos",
+  description: "Compuestos activos formulados científicamente para sincronizarse con tu cuerpo. Haz clic en cualquier tarjeta para ver especificaciones técnicas de laboratorio.",
+  filterLabel: "Filtrar por:",
+  categories: ["Todos", "Enfoque & Mente", "Sueño & Relajación", "Inmunidad & Energía", "Nutricosmética", "Equilibrio Diario"],
+  hoverSpecifications: "Especificaciones",
+  priceLabel: "Precio",
+  addedFeedback: "¡Agregado!",
+  addButton: "Agregar",
+  disclaimer: "Todos los productos son ficticios • Los precios se muestran para fines ilustrativos del carrito",
+  modalTitle: "Ficha de Laboratorio (Ficticia)",
+  modalDose: "Dosis Recomendada:",
+  modalServings: "Servicios:",
+  modalServingsUnit: "tomas",
+  modalActiveIngredient: "Principio Activo Principal:",
+  modalBenefitsTitle: "Beneficios Moleculares",
+  modalPriceUnit: "Precios en USD",
+  modalAddButton: "Agregar al carrito"
+};
+
+export const TESTIMONIALS_TEXTS = {
+  subtitle: "Comunidad & Experiencias",
+  title: "Testimonios",
+  description: "Profesionales de alta demanda, científicos y atletas comparten su experiencia de equilibrio celular con nuestras formulaciones.",
+  footerStat: "Más del 94% de nuestros usuarios recurrentes reportan mejoras en sus marcadores de energía y concentración en las primeras 4 semanas."
+};
+
+export const CART_TEXTS = {
+  title: "Tu Carrito",
+  itemUnit: "ítem",
+  itemsUnit: "ítems",
+  emptyTitle: "El carrito está vacío",
+  emptySubtitle: "Explora nuestro catálogo de elíxires adaptógenos y agrega salud y rendimiento a tu rutina diaria.",
+  emptyBrowseBtn: "Explorar productos",
+  summarySubtotal: "Subtotal",
+  summaryTax: "IVA",
+  summaryTotal: "Total General",
+  summaryCurrencyUnit: "Dólares USD",
+  checkoutBtn: "Procesar pago (Simulado)",
+  continueShoppingBtn: "Seguir Comprando"
+};
+
+export const CHECKOUT_MODAL_TEXTS = {
+  title: "PROYECTO EDUCATIVO",
+  badge: "Simulación Académica",
+  salutation: "Estimado visitante / evaluador:",
+  bodyLine1: "Este sitio web ha sido desarrollado como un",
+  bodyLine1Bold: "proyecto académico de simulación",
+  bodyLine1Rest: "para demostrar habilidades de desarrollo front-end, diseño UX/UI responsive y persistencia de datos.",
+  bodyLine2: "La transacción que acaba de iniciar es completamente ficticia:",
+  bullet1: "No se procesará ningún cargo monetario real.",
+  bullet2: "No se recopilan datos bancarios ni de tarjetas de crédito.",
+  bullet3: "No se enviará ningún producto físico real.",
+  thankYou: "¡Gracias por explorar nuestro proyecto educativo!",
+  confirmBtn: "Aceptar y Vaciar Carrito"
+};
+
+

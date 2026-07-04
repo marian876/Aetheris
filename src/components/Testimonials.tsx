@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { Star, Quote, Heart } from "lucide-react";
-import { TESTIMONIALS } from "../data";
+import { TESTIMONIALS, TESTIMONIALS_TEXTS } from "../data";
 
 export default function Testimonials() {
   return (
@@ -12,14 +12,14 @@ export default function Testimonials() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="font-sans text-xs font-bold tracking-widest text-emerald-400 uppercase mb-2">
-            Comunidad & Experiencias
+            {TESTIMONIALS_TEXTS.subtitle}
           </h2>
           <h3 className="font-sans text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
-            Testimonios
+            {TESTIMONIALS_TEXTS.title}
           </h3>
           <div className="mt-4 h-1 w-16 bg-gradient-to-r from-emerald-500 to-teal-400 mx-auto rounded-full" />
           <p className="font-sans text-slate-400 max-w-xl mx-auto text-sm mt-4">
-            Profesionales de alta demanda, científicos y atletas comparten su experiencia de equilibrio celular con nuestras formulaciones.
+            {TESTIMONIALS_TEXTS.description}
           </p>
         </div>
 
@@ -91,7 +91,7 @@ export default function Testimonials() {
         <div className="mt-16 text-center bg-slate-950/40 border border-slate-900 rounded-2xl p-6 max-w-2xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-3">
           <Heart className="h-5 w-5 text-emerald-400 animate-pulse" />
           <p className="font-sans text-xs text-slate-400">
-            Más del <strong className="text-white font-semibold">94% de nuestros usuarios recurrentes</strong> reportan mejoras en sus marcadores de energía y concentración en las primeras 4 semanas.
+            {TESTIMONIALS_TEXTS.footerStat}
           </p>
         </div>
       </div>

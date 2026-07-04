@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Star, Shield, HelpCircle, ShoppingCart, CheckCircle2, SlidersHorizontal, Info, X } from "lucide-react";
-import { PRODUCTS } from "../data";
+import { Star, ShoppingCart, CheckCircle2, SlidersHorizontal, Info, X } from "lucide-react";
+import { PRODUCTS, PRODUCTS_TEXTS } from "../data";
 import { Product } from "../types";
 
 interface ProductsProps {
@@ -14,7 +14,7 @@ export default function Products({ onAddToCart }: ProductsProps) {
   const [detailProduct, setDetailProduct] = useState<Product | null>(null);
   const [addedProductIds, setAddedProductIds] = useState<string[]>([]);
 
-  const categories = ["Todos", "Enfoque & Mente", "Sueño & Relajación", "Inmunidad & Energía", "Nutricosmética", "Equilibrio Diario"];
+  const categories = PRODUCTS_TEXTS.categories;
 
   const filteredProducts = selectedCategory === "Todos"
     ? PRODUCTS
@@ -39,14 +39,14 @@ export default function Products({ onAddToCart }: ProductsProps) {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="font-sans text-xs font-bold tracking-widest text-emerald-400 uppercase mb-2">
-            Catálogo Oficial
+            {PRODUCTS_TEXTS.subtitle}
           </h2>
           <h3 className="font-sans text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
-            Nuestros Productos
+            {PRODUCTS_TEXTS.title}
           </h3>
           <div className="mt-4 h-1 w-16 bg-gradient-to-r from-emerald-500 to-teal-400 mx-auto rounded-full" />
           <p className="font-sans text-slate-400 max-w-xl mx-auto text-sm mt-4">
-            Compuestos activos formulados científicamente para sincronizarse con tu cuerpo. Haz clic en cualquier tarjeta para ver especificaciones técnicas de laboratorio.
+            {PRODUCTS_TEXTS.description}
           </p>
         </div>
 
@@ -55,7 +55,7 @@ export default function Products({ onAddToCart }: ProductsProps) {
           <div className="flex gap-2 mx-auto">
             <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900/50 border border-slate-850 text-slate-400 text-xs font-mono uppercase tracking-wider shrink-0 mr-2">
               <SlidersHorizontal className="h-3.5 w-3.5 text-emerald-400" />
-              Filtrar por:
+              {PRODUCTS_TEXTS.filterLabel}
             </div>
             {categories.map((cat) => (
               <button
@@ -113,7 +113,7 @@ export default function Products({ onAddToCart }: ProductsProps) {
                       <div className="absolute inset-0 bg-slate-950/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <span className="flex items-center gap-1 bg-emerald-500/90 text-slate-950 text-xs font-bold px-3 py-1.5 rounded-lg shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                           <Info className="h-4 w-4" />
-                          Especificaciones
+                          {PRODUCTS_TEXTS.hoverSpecifications}
                         </span>
                       </div>
                     </div>
@@ -156,7 +156,7 @@ export default function Products({ onAddToCart }: ProductsProps) {
                   {/* Price & Buy Section */}
                   <div className="mt-6 pt-4 border-t border-slate-900/60 flex items-center justify-between">
                     <div>
-                      <span className="font-sans text-[10px] text-slate-500 block uppercase">Precio</span>
+                      <span className="font-sans text-[10px] text-slate-500 block uppercase">{PRODUCTS_TEXTS.priceLabel}</span>
                       <span className="font-mono text-xl font-bold text-white">
                         ${prod.price.toFixed(2)} <span className="text-[10px] font-sans font-light text-slate-400">USD</span>
                       </span>
@@ -174,12 +174,12 @@ export default function Products({ onAddToCart }: ProductsProps) {
                       {isAdded ? (
                         <>
                           <CheckCircle2 className="h-4 w-4" />
-                          ¡Agregado!
+                          {PRODUCTS_TEXTS.addedFeedback}
                         </>
                       ) : (
                         <>
                           <ShoppingCart className="h-4 w-4" />
-                          Agregar
+                          {PRODUCTS_TEXTS.addButton}
                         </>
                       )}
                     </button>
@@ -193,7 +193,7 @@ export default function Products({ onAddToCart }: ProductsProps) {
         {/* Decorative disclaimer notice */}
         <div className="mt-12 text-center">
           <p className="font-mono text-[9px] text-slate-600 uppercase tracking-wider">
-            Todos los productos son ficticios • Los precios se muestran para fines ilustrativos del carrito
+            {PRODUCTS_TEXTS.disclaimer}
           </p>
         </div>
       </div>
@@ -256,19 +256,19 @@ export default function Products({ onAddToCart }: ProductsProps) {
                   {/* Fictive Specs Block */}
                   <div className="bg-slate-950 rounded-xl p-4 border border-slate-850 space-y-2">
                     <span className="font-mono text-[10px] text-slate-500 uppercase block tracking-wider">
-                      Ficha de Laboratorio (Ficticia)
+                      {PRODUCTS_TEXTS.modalTitle}
                     </span>
                     <div className="grid grid-cols-2 gap-3 text-xs">
                       <div>
-                        <span className="text-slate-400 block">Dosis Recomendada:</span>
+                        <span className="text-slate-400 block">{PRODUCTS_TEXTS.modalDose}</span>
                         <span className="text-slate-200 font-medium">{detailProduct.specs.servingSize}</span>
                       </div>
                       <div>
-                        <span className="text-slate-400 block">Servicios:</span>
-                        <span className="text-slate-200 font-medium">{detailProduct.specs.servings} tomas</span>
+                        <span className="text-slate-400 block">{PRODUCTS_TEXTS.modalServings}</span>
+                        <span className="text-slate-200 font-medium">{detailProduct.specs.servings} {PRODUCTS_TEXTS.modalServingsUnit}</span>
                       </div>
                       <div className="col-span-2 border-t border-slate-900 pt-2">
-                        <span className="text-slate-400 block">Principio Activo Principal:</span>
+                        <span className="text-slate-400 block">{PRODUCTS_TEXTS.modalActiveIngredient}</span>
                         <span className="text-emerald-400 font-medium">{detailProduct.specs.mainIngredient}</span>
                       </div>
                     </div>
@@ -276,7 +276,7 @@ export default function Products({ onAddToCart }: ProductsProps) {
 
                   {/* Complete list of benefits */}
                   <div className="space-y-1.5">
-                    <span className="font-sans text-xs font-bold text-slate-400 uppercase tracking-widest block">Beneficios Moleculares</span>
+                    <span className="font-sans text-xs font-bold text-slate-400 uppercase tracking-widest block">{PRODUCTS_TEXTS.modalBenefitsTitle}</span>
                     <ul className="space-y-1.5">
                       {detailProduct.benefits.map((ben, bIdx) => (
                         <li key={bIdx} className="flex items-start gap-1.5 text-xs text-slate-300 leading-snug">
@@ -293,7 +293,7 @@ export default function Products({ onAddToCart }: ProductsProps) {
                       <span className="font-mono text-2xl font-bold text-white">
                         ${detailProduct.price.toFixed(2)}
                       </span>
-                      <span className="font-sans text-[10px] text-slate-500 block uppercase">Precios en USD</span>
+                      <span className="font-sans text-[10px] text-slate-500 block uppercase">{PRODUCTS_TEXTS.modalPriceUnit}</span>
                     </div>
 
                     <button
@@ -305,7 +305,7 @@ export default function Products({ onAddToCart }: ProductsProps) {
                       className="px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-400 text-slate-950 font-bold text-xs flex items-center gap-2 transition-all hover:scale-105 active:scale-95 cursor-pointer"
                     >
                       <ShoppingCart className="h-4 w-4" />
-                      Agregar al carrito
+                      {PRODUCTS_TEXTS.modalAddButton}
                     </button>
                   </div>
                 </div>

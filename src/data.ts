@@ -4,7 +4,7 @@ export const COMPANY_NAME = "ARTHERIS";
 export const COMPANY_SLOGAN = "La fusión perfecta entre sabiduría botánica y rigor científico";
 export const COMPANY_DESCRIPTION = "Diseñamos suplementos adaptógenos de última generación. Fusionamos los compuestos bioactivos de hongos ancestrales y extractos botánicos con la biotecnología moderna para optimizar tu bienestar mental, físico y celular.";
 
-export const COMPANY_HISTORY = `Aetheris nació de la convergencia de dos mundos aparentemente opuestos: el misticismo de la botánica ancestral y el rigor inalterable de la investigación científica. Fundada en 2018 por un equipo multidisciplinario de neurocientíficos y etnobotánicos, la empresa surgió tras un viaje de investigación por los bosques nubosos de Asia Central y los Andes. Allí, nuestro equipo experimentó de primera mano el poder regulador de los adaptógenos naturales.
+export const COMPANY_HISTORY = `Artheris nació de la convergencia de dos mundos aparentemente opuestos: el misticismo de la botánica ancestral y el rigor inalterable de la investigación científica. Fundada en 2018 por un equipo multidisciplinario de neurocientíficos y etnobotánicos, la empresa surgió tras un viaje de investigación por los bosques nubosos de Asia Central y los Andes. Allí, nuestro equipo experimentó de primera mano el poder regulador de los adaptógenos naturales.
 
 Decididos a rescatar estos principios activos pero despojándolos de cualquier pseudociencia, establecimos nuestro laboratorio de biotecnología celular. Hoy en día, aislamos los compuestos con una precisión nanométrica para asegurar que cada gota y cada cápsula ofrezca la concentración exacta requerida para regular la respuesta fisiológica al estrés, el enfoque mental y el descanso celular.`;
 

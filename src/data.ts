@@ -1,6 +1,6 @@
 import { Product, ScientificStudy, Milestone, Testimonial, FAQItem, CompanyValue } from "./types";
 
-export const COMPANY_NAME = "AETHERIS";
+export const COMPANY_NAME = "ARTHERIS";
 export const COMPANY_SLOGAN = "La fusión perfecta entre sabiduría botánica y rigor científico";
 export const COMPANY_DESCRIPTION = "Diseñamos suplementos adaptógenos de última generación. Fusionamos los compuestos bioactivos de hongos ancestrales y extractos botánicos con la biotecnología moderna para optimizar tu bienestar mental, físico y celular.";
 

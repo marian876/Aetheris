@@ -1,0 +1,6 @@
+{
+  "name": "Aetheris - Suplementos Adaptógenos Premium",
+  "description": "Sitio web oficial de Aetheris, líderes en suplementación botánica adaptógena con respaldo científico. Explora nuestro catálogo de elíxires y potencia tu rendimiento.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
